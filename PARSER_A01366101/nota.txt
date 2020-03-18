@@ -1,0 +1,8 @@
+A custom test file is expected to be introduced into the folder for the project to work, 
+scripting.py has a default c- type file called sample.c to be tested,
+scripting.py is the default testing script showed in the project description.
+
+
+
+Project was tested(executed) from spyder python editor in a computer 
+with Windows10 64b OS.

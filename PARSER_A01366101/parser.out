@@ -1,0 +1,139 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    COMMENTS
+
+Grammar
+
+Rule 0     S' -> start
+Rule 1     fun_declaration -> type_specifier ID LPAREN params RPAREN compound_stmt
+Rule 2     params -> param_list
+Rule 3     params -> VOID
+Rule 4     param_list -> param_list COMMA param
+Rule 5     param_list -> param
+Rule 6     start -> declaration_list
+Rule 7     declaration_list -> declaration_list declaration
+Rule 8     declaration_list -> declaration
+Rule 9     declaration -> var_declaration
+Rule 10    declaration -> fun_declaration
+Rule 11    declaration -> ENDFILE
+Rule 12    var_declaration -> type_specifier ID SEMICOLON
+Rule 13    var_declaration -> type_specifier ID LBRACKET NUMBER RBRACKET SEMICOLON
+Rule 14    type_specifier -> INT
+Rule 15    type_specifier -> VOID
+Rule 16    param -> type_specifier ID
+Rule 17    param -> type_specifier LBRACKET RBRACKET
+Rule 18    compound_stmt -> LBLOCK local_declarations statement_list RBLOCK
+Rule 19    local_declarations -> localdeclarations var_declaration
+Rule 20    local_declarations -> <empty>
+Rule 21    statement_list -> statement_list statement
+Rule 22    statement_list -> <empty>
+Rule 23    statement -> expression_stmt
+Rule 24    statement -> compound_stmt
+Rule 25    statement -> selection_stmt
+Rule 26    statement -> iteration_stmt
+Rule 27    statement -> return_stmt
+Rule 28    expression_stmt -> expression SEMICOLON
+Rule 29    expression_stmt -> SEMICOLON
+Rule 30    selection_stmt -> IF LPAREN expression RPAREN statement
+Rule 31    selection_stmt -> IF LPAREN expression RPAREN statement ELSE statement
+Rule 32    iteration_stmt -> WHILE LPAREN expression RPAREN statement
+Rule 33    return_stmt -> RETURN SEMICOLON
+Rule 34    return_stmt -> RETURN expression SEMICOLON
+Rule 35    expression -> var EQUAL expression
+Rule 36    expression -> simple_expression
+Rule 37    var -> ID
+Rule 38    var -> ID LBRACKET expression RBRACKET
+Rule 39    simple_expression -> additive_expression relop additive_expression
+Rule 40    simple_expression -> additive_expression
+Rule 41    relop -> LE
+Rule 42    relop -> LT
+Rule 43    relop -> GREATER
+Rule 44    relop -> LESS
+Rule 45    relop -> COMPARE
+Rule 46    relop -> NE
+Rule 47    additive_expression -> additive_expression addop term
+Rule 48    additive_expression -> term
+Rule 49    addop -> PLUS
+Rule 50    addop -> MINUS
+Rule 51    term -> term mulop factor
+Rule 52    term -> factor
+Rule 53    mulop -> TIMES
+Rule 54    mulop -> DIVIDE
+Rule 55    factor -> LPAREN expression RPAREN
+Rule 56    factor -> ID
+Rule 57    factor -> call
+Rule 58    factor -> NUMBER
+Rule 59    call -> ID LPAREN args RPAREN
+Rule 60    args -> arg_list
+Rule 61    args -> <empty>
+Rule 62    arg_list -> arg_list COMMA expression
+Rule 63    arg_list -> expression
+
+Terminals, with rules where they appear
+
+COMMA                : 4 62
+COMMENTS             : 
+COMPARE              : 45
+DIVIDE               : 54
+ELSE                 : 31
+ENDFILE              : 11
+EQUAL                : 35
+GREATER              : 43
+ID                   : 1 12 13 16 37 38 56 59
+IF                   : 30 31
+INT                  : 14
+LBLOCK               : 18
+LBRACKET             : 13 17 38
+LE                   : 41
+LESS                 : 44
+LPAREN               : 1 30 31 32 55 59
+LT                   : 42
+MINUS                : 50
+NE                   : 46
+NUMBER               : 13 58
+PLUS                 : 49
+RBLOCK               : 18
+RBRACKET             : 13 17 38
+RETURN               : 33 34
+RPAREN               : 1 30 31 32 55 59
+SEMICOLON            : 12 13 28 29 33 34
+TIMES                : 53
+VOID                 : 3 15
+WHILE                : 32
+error                : 
+
+Nonterminals, with rules where they appear
+
+additive_expression  : 39 39 40 47
+addop                : 47
+arg_list             : 60 62
+args                 : 59
+call                 : 57
+compound_stmt        : 1 24
+declaration          : 7 8
+declaration_list     : 6 7
+expression           : 28 30 31 32 34 35 38 55 62 63
+expression_stmt      : 23
+factor               : 51 52
+fun_declaration      : 10
+iteration_stmt       : 26
+local_declarations   : 18
+localdeclarations    : 19
+mulop                : 51
+param                : 4 5
+param_list           : 2 4
+params               : 1
+relop                : 39
+return_stmt          : 27
+selection_stmt       : 25
+simple_expression    : 36
+start                : 0
+statement            : 21 30 31 31 32
+statement_list       : 18 21
+term                 : 47 48 51
+type_specifier       : 1 12 13 16 17
+var                  : 35
+var_declaration      : 9 19
+
