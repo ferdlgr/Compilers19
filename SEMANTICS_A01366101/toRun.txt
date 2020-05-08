@@ -1,0 +1,4 @@
+*Semantic file was tested through Spider (Python 3.7) Anaconda distribution, 
+by compiling global Types, the Lexer, the Parser, The Semantic File 
+and finally the Testing file.
+Test file sample.c- must be in the same directory.
